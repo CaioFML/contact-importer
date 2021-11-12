@@ -1,0 +1,36 @@
+inherit_mode:
+  merge:
+    - Exclude
+
+require:
+  - rubocop-rails
+  - rubocop-performance
+  - rubocop-rspec
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - bin/**/*
+    - db/**/*
+    - tmp/**/*
+    - vendor/**/*
+    - node_modules/**/*
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  CacheRootDirectory: tmp
+
+Metrics/MethodLength:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+RSpec/FilePath:
+  Exclude:
+    - spec/requests/**/*.rb
