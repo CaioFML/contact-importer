@@ -43,3 +43,7 @@ Metrics/BlockLength:
     - lib/tasks/**/*.rb
     - lib/tasks/*.rake
     - config/**/*.rb
+
+Lint/MissingSuper:
+  Exclude:
+    - 'app/services/**/*'
