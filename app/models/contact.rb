@@ -12,11 +12,11 @@ class Contact < ApplicationRecord
                                      (\(\+\d{2}\)\s\d{3}-\d{3}-\d{2}-\d{2})\z/x,
                               message: "Only the formats (+00) 000 000 00 00 and (+00) 000-000-00-00 are allowed" }
 
-  validate :birthday_format
+  validate :date_of_birth_format
 
   private
 
-  def birthday_format
+  def date_of_birth_format
     Date.iso8601(date_of_birth)
   rescue Date::Error
     errors.add(:date_of_birth, "only the formats YYYYMMDD and YYYY-MM-DD are allowed")
