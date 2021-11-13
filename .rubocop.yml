@@ -34,3 +34,12 @@ Style/FrozenStringLiteralComment:
 RSpec/FilePath:
   Exclude:
     - spec/requests/**/*.rb
+
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*.rb
+    - Rakefile
+    - Guardfile
+    - lib/tasks/**/*.rb
+    - lib/tasks/*.rake
+    - config/**/*.rb
