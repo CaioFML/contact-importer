@@ -31,26 +31,26 @@ describe Contact do
 
     it do
       expect(contact).to allow_value("19960110")
-                           .for(:date_of_birth)
-                           .with_message("only the formats YYYYMMDD and YYYY-MM-DD are allowed")
+        .for(:date_of_birth)
+        .with_message("only the formats YYYYMMDD and YYYY-MM-DD are allowed")
     end
 
     it do
       expect(contact).to allow_value("1996-01-10")
-                           .for(:date_of_birth)
-                           .with_message("only the formats YYYYMMDD and YYYY-MM-DD are allowed")
+        .for(:date_of_birth)
+        .with_message("only the formats YYYYMMDD and YYYY-MM-DD are allowed")
     end
 
     it do
       expect(contact).to allow_value("Caio Motta")
-                           .for(:name)
-                           .with_message("Special characters is not allowed, you can use only \"-\"")
+        .for(:name)
+        .with_message("Special characters is not allowed, you can use only \"-\"")
     end
 
     it do
       expect(contact).to allow_value("Caio-Motta")
-                           .for(:name)
-                           .with_message("Special characters is not allowed, you can use only \"-\"")
+        .for(:name)
+        .with_message("Special characters is not allowed, you can use only \"-\"")
     end
   end
 
