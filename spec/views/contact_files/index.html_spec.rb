@@ -19,6 +19,10 @@ describe "contact_files/index.html.erb" do
     expect(rendered).to have_content "Contact Files"
   end
 
+  it "displays link to import file" do
+    expect(rendered).to have_link "Import file", href: new_contact_file_path
+  end
+
   it "displays table headers" do
     expect(rendered).to have_content "File name"
     expect(rendered).to have_content "Status"
