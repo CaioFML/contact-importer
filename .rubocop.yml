@@ -46,4 +46,9 @@ Metrics/BlockLength:
 
 Lint/MissingSuper:
   Exclude:
-    - 'app/services/**/*'
+    - app/services/**/*
+
+RSpec/MultipleExpectations:
+  Exclude:
+    - spec/system/**/*.rb
+    - spec/views/**/*.rb
