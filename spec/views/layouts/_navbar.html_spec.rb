@@ -18,4 +18,8 @@ describe "layouts/_navbar.html.erb" do
   it "displays link to contact files" do
     expect(rendered).to have_link "Contacts files", href: contact_files_path
   end
+
+  it "displays link to logout" do
+    expect(rendered).to have_link "Logout", href: destroy_user_session_path
+  end
 end

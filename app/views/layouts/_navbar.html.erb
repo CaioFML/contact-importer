@@ -7,5 +7,6 @@
     <li><%= link_to "Home", contacts_path, class: "nav-link active" %></li>
     <li><%= link_to "Contacts", contacts_path, class: "nav-link" %></li>
     <li><%= link_to "Contacts files", contact_files_path, class: "nav-link" %></li>
+    <li><%= link_to "Logout", destroy_user_session_path, method: :delete, class: "nav-link" %></li>
   </ul>
 </header>
