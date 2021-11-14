@@ -40,7 +40,7 @@ describe ContactFilesController do
             credit_card: "4",
             email: "5"
           }
-        },
+        }
       }
     end
 
