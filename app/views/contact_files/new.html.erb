@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    <h1>Import contact file</h1>
+    <%= form_for(@contact_file, multipart: true) do |f| %>
+      <%= f.hidden_field :user_id, value: current_user.id %>
+      <%= f.file_field :file, label: "File", class: "form-control form-control-lg", required: true %>
+
+      <h4 class="my-3">Please, select order of columns:</h4>
+      <div class="row">
+        <div class="col-sm-2">
+          <label>Name:</label>
+          <%= create_select_options("name").html_safe %>
+        </div>
+        <div class="col-sm-2">
+          <label>Date of birth:</label>
+          <%= create_select_options("date_of_birth").html_safe %>
+        </div>
+        <div class="col-sm-2">
+          <label>Phone:</label>
+          <%= create_select_options("phone").html_safe %>
+        </div>
+        <div class="col-sm-2">
+          <label>Address:</label>
+          <%= create_select_options("address").html_safe %>
+        </div>
+        <div class="col-sm-2">
+          <label>Credit card:</label>
+          <%= create_select_options("credit_card").html_safe %>
+        </div>
+        <div class="col-sm-2">
+          <label>Email:</label>
+          <%= create_select_options("email").html_safe %>
+        </div>
+      </div>
+
+      <%= f.submit "Import", class: "btn btn-lg btn-primary my-3" %>
+    <% end %>
+  </div>
+</div>
