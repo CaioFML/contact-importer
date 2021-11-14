@@ -51,6 +51,7 @@ The setup steps expect following tools installed on the system.
     $ rails db:test:prepare
     $ bundle exec rspec
 ```
+*The tests was made with the best practices write in [BetterSpecs](https://www.betterspecs.org/)*
 
 *The coverage of tests can be verified opening: `./coverage/index.html`*
 
