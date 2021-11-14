@@ -1,0 +1,21 @@
+<h1>Contact Files</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>File name</th>
+      <th>Status</th>
+      <th>Log</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @contact_files.each do |contact_file| %>
+      <tr>
+        <td><%= contact_file.file.filename %></td>
+        <td><%= contact_file.status %></td>
+        <td><%= contact_file.log %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
