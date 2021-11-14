@@ -2,7 +2,7 @@ describe ApplicationHelper do
   describe "create_select_options" do
     let(:select_input) do
       <<~SELECT
-      <select name="contact_file[columns][name]" class="form-select">
+      <select name="contact_file[columns][name]" class="form-select" required="true">
         <option value=""></option>
         <option value="0">One</option>
         <option value="1">Two</option>

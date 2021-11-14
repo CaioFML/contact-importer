@@ -1,7 +1,7 @@
 module ApplicationHelper
   def create_select_options(attribute_name)
     <<~SELECT
-      <select name="contact_file[columns][#{attribute_name}]" class="form-select">
+      <select name="contact_file[columns][#{attribute_name}]" class="form-select" required="true">
         <option value=""></option>
         <option value="0">One</option>
         <option value="1">Two</option>
