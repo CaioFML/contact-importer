@@ -32,8 +32,10 @@ group :test do
   gem "faker"
   gem "rails-controller-testing"
   gem "rspec-rails"
+  gem "selenium-webdriver"
   gem "shoulda-matchers"
   gem "simplecov", require: false
+  gem "webdrivers"
 end
 
 group :development do
