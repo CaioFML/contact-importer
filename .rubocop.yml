@@ -52,3 +52,8 @@ RSpec/MultipleExpectations:
   Exclude:
     - spec/system/**/*.rb
     - spec/views/**/*.rb
+
+RSpec/ExampleLength:
+  Exclude:
+    - spec/system/**/*.rb
+    - spec/views/**/*.rb
