@@ -14,6 +14,12 @@ describe ImportContactsJob do
       }
     end
 
+    it "updates contact file status" do
+      perform
+
+      expect(contact_file).to be_processing
+    end
+
     it "cancels coupons" do
       expect(ImportContacts).to receive(:call).with(contact_file: contact_file, column_params: column_params)
 
