@@ -12,6 +12,8 @@ class ContactFilesController < ApplicationController
 
     @contact_file.save
 
+    ImportContactsJob.perform_later(@contact_file, columns_params)
+
     redirect_to contact_files_path, notice: "File was successfully import, wait for the contact importing processing!"
   end
 
