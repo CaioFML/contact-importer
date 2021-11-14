@@ -1,0 +1,34 @@
+<div class="row clearfix">
+  <div class="col-md-6">
+    <h1>Contacts</h1>
+  </div>
+</div>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Date of birth</th>
+      <th>Phone</th>
+      <th>Address</th>
+      <th>Credit card</th>
+      <th>Franchise</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @contacts.each do |contact| %>
+      <tr>
+        <td><%= contact.name %></td>
+        <td><%= contact.email %></td>
+        <td><%= Date.iso8601(contact.date_of_birth).strftime("%Y %B %d") %></td>
+        <td><%= contact.phone %></td>
+        <td><%= contact.address %></td>
+        <td><%= contact.credit_card_last_four_digits %></td>
+        <td><%= contact.franchise %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate @contacts %>
