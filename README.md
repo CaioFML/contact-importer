@@ -2,6 +2,10 @@
 
 This project is an importer of contacts by uploading csv files!
 
+**This project is deployed on heroku and can be accessed from the url:** https://contact-importer-koombea-test.herokuapp.com/
+
+*The credentials for test is the same of the step 9.*
+
 ## Setup
 
 ### Prerequisites
