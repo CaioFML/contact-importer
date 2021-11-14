@@ -13,7 +13,7 @@ describe ContactFilesController do
 
     it { expect(response).to have_http_status :ok }
 
-    it "displays content files" do
+    it "displays contact files" do
       expect(assigns(:contact_files)).to match_array(contact_files)
     end
   end
