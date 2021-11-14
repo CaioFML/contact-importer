@@ -1,0 +1,22 @@
+<% if flash.present? %>
+  <div class="row">
+    <div class="col-lg-6 footer-alert" id="alert-body">
+      <div class="row clearfix position-fixed">
+        <div class="body">
+          <% if flash[:notice] %>
+            <div class="alert alert-info alert-dismissible fade show">
+              <%= flash[:notice] %>
+              <button aria-label="Close" class="btn-close" data-bs-dismiss="alert" type="button"></button>
+            </div>
+          <% end %>
+          <% if flash[:alert] %>
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+              <%= flash[:alert] %>
+              <button aria-label="Close" class="btn-close" data-bs-dismiss="alert" type="button"></button>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
