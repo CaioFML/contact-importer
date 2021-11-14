@@ -9,5 +9,11 @@ describe ContactFile do
     it { expect(build(:contact_file, status: :processing)).to be_processing }
     it { expect(build(:contact_file, status: :failed)).to be_failed }
     it { expect(build(:contact_file, status: :finished)).to be_finished }
+
+    context "when initializing a new contact file" do
+      it "defines default status" do
+        expect(described_class.new).to be_on_hold
+      end
+    end
   end
 end

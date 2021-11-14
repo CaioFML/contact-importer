@@ -6,7 +6,7 @@ class ContactFile < ApplicationRecord
     processing: "processing",
     failed: "failed",
     finished: "finished"
-  }
+  }, _default: :on_hold
 
   belongs_to :user
 end
