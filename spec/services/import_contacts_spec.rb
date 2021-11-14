@@ -15,6 +15,25 @@ describe ImportContacts do
       }
     end
 
+    let(:contact_attributes) do
+      Contact
+        .first
+        .slice(:name, :date_of_birth, :phone, :address, :credit_card_last_four_digits, :email, :franchise)
+        .symbolize_keys
+    end
+
+    let(:contact_file_params) do
+      {
+        name: "Clark kent",
+        date_of_birth: "19900225",
+        phone: "(+57) 123 432 05 02",
+        address: "some street number 6",
+        credit_card_last_four_digits: "1111",
+        franchise: "Visa",
+        email: "example@example.com"
+      }
+    end
+
     shared_examples "imports all contacts" do
       it "creates contacts" do
         expect { call }.to change(Contact, :count).by 3
@@ -30,6 +49,12 @@ describe ImportContacts do
         call
 
         expect(contact_file.log).to be_blank
+      end
+
+      it "import contact with the right values on csv" do
+        call
+
+        expect(contact_attributes).to eq contact_file_params
       end
     end
 
