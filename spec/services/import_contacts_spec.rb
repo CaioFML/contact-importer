@@ -91,7 +91,7 @@ describe ImportContacts do
           Error on row 3: Address can't be blank, Franchise can't be blank, Email is invalid, Phone Only the formats \
           (+00) 000 000 00 00 and (+00) 000-000-00-00 are allowed; Error on row 4: Franchise can't be blank, \
           Name Special characters is not allowed, you can use only "-", Email is invalid, Phone Only the formats \
-          (+00) 000 000 00 00 and (+00) 000-000-00-00 are allowed, Date of birth only the formats YYYYMMDD 
+          (+00) 000 000 00 00 and (+00) 000-000-00-00 are allowed, Date of birth only the formats YYYYMMDD#{' '}
           and YYYY-MM-DD are allowed;
         TEXT
       end
