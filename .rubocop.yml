@@ -57,3 +57,6 @@ RSpec/ExampleLength:
   Exclude:
     - spec/system/**/*.rb
     - spec/views/**/*.rb
+
+RSpec/MessageSpies:
+  EnforcedStyle: receive
