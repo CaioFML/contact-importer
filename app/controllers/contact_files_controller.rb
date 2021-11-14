@@ -20,10 +20,10 @@ class ContactFilesController < ApplicationController
   private
 
   def contact_file_params
-    params.require("contact_file").permit(:file, :user_id)
+    params.require(:contact_file).permit(:file, :user_id)
   end
 
   def columns_params
-    params.require("columns").permit(:name, :date_of_birth, :phone, :address, :credit_card, :email)
+    params.require(:contact_file).permit(columns: %i[name date_of_birth phone address credit_card email])
   end
 end

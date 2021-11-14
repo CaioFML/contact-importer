@@ -29,15 +29,18 @@ describe ContactFilesController do
 
     let(:params) do
       {
-        contact_file: { file: fixture_file_upload("valid_contacts.csv"), user_id: user.id },
-        columns: {
-          name: "0",
-          date_of_birth: "1",
-          phone: "2",
-          address: "3",
-          credit_card: "4",
-          email: "5"
-        }
+        contact_file: {
+          file: fixture_file_upload("valid_contacts.csv"),
+          user_id: user.id,
+          columns: {
+            name: "0",
+            date_of_birth: "1",
+            phone: "2",
+            address: "3",
+            credit_card: "4",
+            email: "5"
+          }
+        },
       }
     end
 
@@ -52,7 +55,8 @@ describe ContactFilesController do
     it "enqueues import contacts job" do
       post_create
 
-      expect(ImportContactsJob).to have_been_enqueued.with(ContactFile.first, params[:columns])
+      expect(ImportContactsJob)
+        .to have_been_enqueued.with(ContactFile.first, params[:contact_file].slice(:columns))
     end
 
     it "displays flash notice" do
