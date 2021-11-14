@@ -54,5 +54,11 @@ describe ContactFilesController do
 
       expect(flash[:notice]).to eq "File was successfully import, wait for the contact importing processing!"
     end
+
+    it do
+      post_create
+
+      expect(response).to redirect_to contact_files_path
+    end
   end
 end
