@@ -1,5 +1,5 @@
 describe ApplicationHelper do
-  describe "create_select_options" do
+  describe "#create_select_options" do
     let(:select_input) do
       <<~SELECT
         <select name="contact_file[columns][name]" class="form-select" required="true">
@@ -16,6 +16,12 @@ describe ApplicationHelper do
 
     it "returns select input with options" do
       expect(create_select_options("name")).to eq select_input
+    end
+  end
+
+  describe "#format_date" do
+    it "formats date" do
+      expect(format_date("19901025")).to eq "1990 October 25"
     end
   end
 end

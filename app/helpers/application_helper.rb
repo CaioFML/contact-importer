@@ -12,4 +12,8 @@ module ApplicationHelper
       </select>
     SELECT
   end
+
+  def format_date(date)
+    Date.iso8601(date).strftime("%Y %B %d")
+  end
 end
