@@ -1,0 +1,11 @@
+<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+  <%= link_to contacts_path, class: "d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none" do %>
+    <span class="fs-4">Contacts Importer</span>
+  <% end %>
+
+  <ul class="nav nav-pills">
+    <li><%= link_to "Home", contacts_path, class: "nav-link active" %></li>
+    <li><%= link_to "Contacts", contacts_path, class: "nav-link" %></li>
+    <li><%= link_to "Contacts files", contact_files_path, class: "nav-link" %></li>
+  </ul>
+</header>
