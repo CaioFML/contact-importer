@@ -56,7 +56,7 @@ The setup steps expect following tools installed on the system.
     $ bundle exec rubocop
 ```
 
-7. Run server, webpacker and sidekiq (use different tabs of console for each command):
+7. Run server, webpacker-dev-server (to compile the assets) and sidekiq (use different tabs of console for each command):
 
 ```
     $ rails s
