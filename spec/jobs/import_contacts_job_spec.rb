@@ -5,12 +5,14 @@ describe ImportContactsJob do
     let(:contact_file) { create(:contact_file, file: fixture_file_upload("valid_contacts.csv")) }
     let(:column_params) do
       {
-        name: "0",
-        date_of_birth: "1",
-        phone: "2",
-        address: "3",
-        credit_card: "4",
-        email: "5"
+        columns: {
+          name: "0",
+          date_of_birth: "1",
+          phone: "2",
+          address: "3",
+          credit_card: "4",
+          email: "5"
+        }
       }
     end
 
