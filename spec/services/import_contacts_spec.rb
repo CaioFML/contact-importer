@@ -4,12 +4,14 @@ describe ImportContacts do
 
     let(:column_params) do
       {
-        name: "0",
-        date_of_birth: "1",
-        phone: "2",
-        address: "3",
-        credit_card: "4",
-        email: "5"
+        columns: {
+          name: "0",
+          date_of_birth: "1",
+          phone: "2",
+          address: "3",
+          credit_card: "4",
+          email: "5"
+        }
       }
     end
 
@@ -44,12 +46,14 @@ describe ImportContacts do
 
       let(:column_params) do
         {
-          name: "4",
-          date_of_birth: "0",
-          phone: "5",
-          address: "1",
-          credit_card: "2",
-          email: "3"
+          columns: {
+            name: "4",
+            date_of_birth: "0",
+            phone: "5",
+            address: "1",
+            credit_card: "2",
+            email: "3"
+          }
         }
       end
 

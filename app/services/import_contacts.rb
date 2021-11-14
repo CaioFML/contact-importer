@@ -50,7 +50,7 @@ class ImportContacts < ApplicationService
   end
 
   def file_content(content, column_params_name)
-    content[column_params[column_params_name].to_i]
+    content[column_params[:columns][column_params_name].to_i]
   end
 
   def some_contact_persisted?
