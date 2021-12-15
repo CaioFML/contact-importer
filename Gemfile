@@ -31,6 +31,7 @@ group :test do
   gem "faker"
   gem "rails-controller-testing"
   gem "rspec-rails"
+  gem "rspec-sidekiq"
   gem "selenium-webdriver"
   gem "shoulda-matchers"
   gem "simplecov", require: false

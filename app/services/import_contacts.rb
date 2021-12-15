@@ -5,7 +5,7 @@ class ImportContacts < ApplicationService
 
   def initialize(contact_file:, column_params:)
     @contact_file = contact_file
-    @column_params = column_params
+    @column_params = column_params.symbolize_keys
     @initialized_contacts = []
   end
 

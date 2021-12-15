@@ -56,7 +56,7 @@ describe ContactFilesController do
       post_create
 
       expect(ImportContactsJob)
-        .to have_been_enqueued.with(ContactFile.first, params[:contact_file].slice(:columns))
+        .to have_enqueued_sidekiq_job(ContactFile.first.id, params[:contact_file].slice(:columns))
     end
 
     it "displays flash notice" do
