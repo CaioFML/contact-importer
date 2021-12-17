@@ -2,6 +2,9 @@ require "sidekiq/web"
 
 Rails.application.routes.draw do
   devise_for :users
+  devise_scope :user do
+    post "api/v1/sign_in", to: "devise/sessions#create", defaults: { format: :json }
+  end
 
   mount Sidekiq::Web, at: "/sidekiq"
 
