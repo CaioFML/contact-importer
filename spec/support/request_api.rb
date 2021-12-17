@@ -11,7 +11,3 @@ module RequestAPI
     response.headers.slice("Authorization")
   end
 end
-
-RSpec.configure do |config|
-  config.include RequestAPI, type: :request
-end
