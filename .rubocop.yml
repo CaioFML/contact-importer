@@ -60,3 +60,7 @@ RSpec/ExampleLength:
 
 RSpec/MessageSpies:
   EnforcedStyle: receive
+
+# Just added that to wrap a describe inside a describe to separate behaviors of API and Monolith
+RSpec/NestedGroups:
+  Max: 4
