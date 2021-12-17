@@ -8,6 +8,12 @@ Rails.application.routes.draw do
 
   mount Sidekiq::Web, at: "/sidekiq"
 
+  namespace :api, defaults: { format: :json } do
+    namespace :v1 do
+      resources :contacts, only: :index
+    end
+  end
+
   resources :contacts, only: :index
   resources :contact_files, only: %i[index new create]
 
