@@ -1,9 +1,7 @@
 describe Devise::SessionsController do
   describe "api/v1" do
     describe "POST #create" do
-      subject!(:post_create) do
-        post api_v1_sign_in_path, params: { user: { email: user.email, password: user.password } }
-      end
+      subject! { post api_v1_sign_in_path, params: { user: { email: user.email, password: user.password } } }
 
       context "with successful login" do
         let(:user) { create(:user) }
